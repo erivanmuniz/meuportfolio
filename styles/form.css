@@ -1,0 +1,49 @@
+.form {
+    width: 512px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.form label {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.form input {
+    height: 40px;
+    color: white;
+}
+
+.form input, .form textarea{
+    
+    background-color: transparent;
+    border: 2px solid greenyellow;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.form input:focus, .form textarea:focus {
+    outline: 2px solid greenyellow;
+}
+
+.form button {
+    height: 80px;
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    border-radius: 12px;
+}
+
+.form textarea {
+    color: white;
+}
+
+button {
+    color: white;
+}
