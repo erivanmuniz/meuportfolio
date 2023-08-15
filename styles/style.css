@@ -186,19 +186,17 @@ cabecalho {
     margin: 5px;
 }
 
-/* Add these styles to the existing responsive CSS */
+/* Adicionando recursos com responsividade */
 
-/* Mobile-first Responsive Styles */
+/* Estilo responsivo para mobile */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header Styles */
+/* Estilo do cabeçalho */
 .cabecalho {
-    background-color: #333;
-    color: white;
     text-align: center;
     padding: 10px;
 }
@@ -207,22 +205,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #444;
     padding: 10px;
 }
 
 .cabecalho__menu__link {
-    color: white;
     text-decoration: none;
     margin: 5px;
 }
 
 @media (min-width: 576px) {
+    /* Estilos de paisagem para celular e tablet */
     .cabecalho__menu {
         flex-direction: row;
         justify-content: space-around;
     }
 }
+
+/* Estilo do conteúdo principal */
 .apresentacao__conteudo {
     padding: 20px;
     text-align: center;
@@ -231,28 +230,31 @@ body {
 .apresentacao__imagem {
     max-width: 100%;
     height: auto;
+    display: block; /* Evita problemas de espaçamento entre as linhas */
+    margin: 0 auto 20px; /* Centralize a imagem e adiciona margem */
 }
 
-@media (min-width: 768px) {
-    .apresentacao__conteudo {
-        padding: 40px;
+@media (min-width: 576px) {
+    /* Estilos de paisagem para celular e tablet*/
+    .apresentacao__imagem {
+        margin: 0 auto 40px; /* Aumente a margem para telas maiores*/
     }
 }
 
+/* Estilo do rodapé */
 .rodape {
     text-align: center;
-    background-color: #333;
-    color: white;
     padding: 10px;
 }
 
 .rodape__logo,
 .rodape__senac {
     width: auto;
-    max-height: 40px; /* Adjust the height as needed */
+    max-height: 40px; /* Ajuste a altura conforme necessário */
 }
 
 @media (min-width: 576px) {
+    /* Estilos de paisagem para celular e tablet */
     .rodape {
         display: flex;
         flex-direction: column;
@@ -265,4 +267,7 @@ body {
         margin: 5px 0;
     }
 }
+
+
+
 
