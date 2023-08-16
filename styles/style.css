@@ -119,8 +119,6 @@ body {
     width:50%;
 }
 .rodape {
-    
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,10 +128,40 @@ body {
     text-align: center;
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
-    font-weight: 400;
-
-    
+    font-weight: 400;   
 }
+
+/* Adicionando recursos com responsividade */
+
+@media (min-width: 576px) {
+    /* Estilos de paisagem para celular e tablet */
+    .cabecalho__menu {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Estilo do conteúdo principal */
+.apresentacao__conteudo {
+    padding: 20px;
+    text-align: center;
+}
+
+.apresentacao__imagem {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Evita problemas de espaçamento entre as linhas */
+    margin: 0 auto 20px; /* Centralize a imagem e adiciona margem */
+}
+
+@media (min-width: 576px) {
+    /* Estilos de paisagem para celular e tablet*/
+    .apresentacao__imagem {
+        margin: 0 auto 40px; /* Aumente a margem para telas maiores*/
+    }
+}
+
+/* Estilo do rodapé */
 .rodape__logo {
     /*width: 50px; 
     height: 50px;*/
@@ -150,56 +178,18 @@ body {
     margin-left: 80px;
 }
 
-.cabecalho {
 
-    text-align: center;
-    padding: 10px;
-}
-
-.cabecalho__menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-}
-
-.cabecalho__menu__link {
-    text-decoration: none;
-    margin: 5px;
-}
-
-cabecalho {
-    text-align: center;
-    padding: 10px;
-}
-
-.cabecalho__menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-}
-
-.cabecalho__menu__link {
-    text-decoration: none;
-    margin: 5px;
-}
-
-*@media (max-width: 1200px) {
-
-    .cabecalho {
-        padding: 10%;
-    }
-    .cabecalho__menu {
-        justify-content: center;
-    }
-    .apresentacao {
-        flex-direction: column-reverse;
-        padding: 5%;
+@media (min-width: 576px) {
+    /* Estilos de paisagem para celular e tablet */
+    .rodape {
+        display: flex;
+        align-items: center;
+        padding: 10px;
     }
 
-    .apresentacao__conteudo {
-        width: auto;
+    .rodape__logo,
+    .rodape__senac {
+        margin: 5px 20;
     }
-
 }
+
