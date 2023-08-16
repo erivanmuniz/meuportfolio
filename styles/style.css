@@ -186,7 +186,7 @@ cabecalho {
     margin: 5px;
 }
 
-*@media (max-width: 620px) {
+*@media (max-width: 1200px) {
 
     .cabecalho {
         padding: 10%;
