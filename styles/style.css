@@ -10,8 +10,6 @@
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -43,13 +41,11 @@ body {
 }
 
 .apresentacao {
-
     padding: 5% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 82px;
-   
 }
 
 .apresentacao__conteudo {
@@ -59,7 +55,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
-   
 
 }
 
@@ -110,17 +105,13 @@ body {
     color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria);
 }
-
 .apresentacao__links__navegacao:hover {
     background-color: var(--cor-hover);
 }
-
 .apresentacao__imagem {
     width:50%;
 }
 .rodape {
-    
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,72 +121,62 @@ body {
     text-align: center;
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
-    font-weight: 400;
-
-    
+    font-weight: 400; 
 }
 
-/* Adicionando recursos com responsividade */
+/*Adicionando recursos de responsividade versão final*/
 
-@media (min-width: 576px) {
-    /* Estilos de paisagem para celular e tablet */
+@media (max-width: 1200px) {
+
+    .cabecalho {
+        padding: 10%;
+    }
     .cabecalho__menu {
-        flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
     }
 }
 
-/* Estilo do conteúdo principal */
-.apresentacao__conteudo {
-    padding: 20px;
-    text-align: center;
-}
-
-.apresentacao__imagem {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Evita problemas de espaçamento entre as linhas */
-    margin: 0 auto 20px; /* Centralize a imagem e adiciona margem */
-}
-
 @media (min-width: 576px) {
-    /* Estilos de paisagem para celular e tablet*/
-    .apresentacao__imagem {
-        margin: 0 auto 40px; /* Aumente a margem para telas maiores*/
+    .rodape__logo {
+        width: 50px; 
+        height: 50px;
+        margin-right: 80px; 
     }
-}
-
-/* Estilo do rodapé */
-.rodape__logo {
-    /*width: 50px; 
-    height: 50px;*/
-    margin-right: 80px; 
-}
-
-.rodape__senac {
-    width: 100px;
-    height: 60px;
-    margin-right: 80px;
-}
-
-.rodape p {
-    margin-left: 80px;
-}
-
-
-@media (min-width: 576px) {
-    /* Estilos de paisagem para celular e tablet */
+    
+    .rodape__senac {
+        width: 100px;
+        height: 60px;
+        margin-right: 80px;
+    }
+    
+    .rodape p {
+        margin-left: 80px;
+    }
+    
     .rodape {
         display: flex;
         align-items: center;
-        padding: 10px;
+        padding: 10px 10px 10px;
     }
-
+    
     .rodape__logo,
     .rodape__senac {
-        margin: 5px 20;
+            margin: 5px 20px 20px;
     }
 }
+
+
+
+
+
 
 
 
