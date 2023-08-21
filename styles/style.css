@@ -10,6 +10,8 @@
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -38,14 +40,17 @@ body {
     font-weight: 900;
     color: var(--cor-terciaria);
     text-decoration: none;
+    
 }
 
 .apresentacao {
+
     padding: 5% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 82px;
+   
 }
 
 .apresentacao__conteudo {
@@ -55,6 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
+   
 
 }
 
@@ -105,13 +111,22 @@ body {
     color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria);
 }
+
 .apresentacao__links__navegacao:hover {
     background-color: var(--cor-hover);
 }
+
 .apresentacao__imagem {
-    width:50%;
+    width: 50%;
+    display: block;
+    justify-content: space-between;
+    border-radius: 32px;
+
 }
+
 .rodape {
+    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,63 +136,125 @@ body {
     text-align: center;
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
-/*Adicionando recursos de responsividade versão final*/
+.rodape__logo {
+    width: 50px; 
+    height: 50px;
+    margin-right: 80px; 
+}
 
-@media (max-width: 1200px) {
+.rodape__senac {
+    width: 100px;
+    height: 60px;
+    margin-right: 80px;
+}
 
+.rodape p {
+    margin-left: 80px;
+}
+
+.rodape {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px;
+}
+
+.rodape__logo,
+.rodape__senac {
+        margin: 5px 20px 20px;
+}
+
+
+/* Estilo do Mobile */
+@media (max-width: 767px) {
     .cabecalho {
-        padding: 10%;
+        padding: 2% 5%;
     }
     .cabecalho__menu {
+        display: grid;
         justify-content: center;
+        gap: 16px;
     }
     .apresentacao {
-        flex-direction: column-reverse;
-        padding: 5%;
+        padding: 2% 5% 10%;
+        flex-direction: column-reverse; 
     }
-
-    .apresentacao__conteudo {
-        width: auto;
+    .apresentacao__conteudo,
+    .apresentacao__imagem {
+        width: 100%;
+        text-align: center;
     }
-}
-
-@media (min-width: 480px) {
-    .rodape__logo {
-        width: 50px; 
-        height: 50px;
-        margin-right: 80px; 
+    .apresentacao__imagem img {
+        max-width: 100%;
+        height: auto;
     }
-    
-    .rodape__senac {
-        width: 100px;
-        height: 60px;
-        margin-right: 80px;
+    .form {
+        width: 90%;
+        margin: 0 auto;
     }
-    
-    .rodape p {
-        margin-left: 80px;
-    }
-    
     .rodape {
-        display: flex;
-        align-items: center;
-        padding: 10px 10px 10px;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
     }
-    
     .rodape__logo,
     .rodape__senac {
-            margin: 5px 20px 20px;
+        margin: 8px auto;
+    }
+    .rodape p {
+        margin: 0;
+    }
+    .rodape__senac {
+        height: 5%;
     }
 }
-@media (min-width: 300px) and (max-width: 600px) {
-    .cabecalho__menu{
-        display: grid;
-        align-items: center;
+
+/* Estilo do Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .cabecalho__menu {
+        display: flex;
+        justify-content: flex-start;
+        gap: 80px;
     }
+    
 }
+
+  /*Estilo do Desktop */
+@media (min-width: 1024px) {
+    
+    .rodape {
+        text-align: center;
+        padding: 2rem 3;
+        margin-top: 0;
+    }
+    .rodape__logo,
+    .rodape__senac,
+    p {
+        margin: 8px 0; 
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .rodape p {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .rodape__logo {
+        width: 8%;
+        height: 8%;
+    }
+    .rodape__senac {
+        width: 8%;
+        height: 5%;
+    
+    }
+    
+}
+
 
 
 
