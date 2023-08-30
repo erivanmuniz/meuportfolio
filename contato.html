@@ -8,6 +8,7 @@
     <title>Contato</title>
     <link rel="stylesheet" href="./styles/form.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/efeito.css">
     
 </head>
 <body>
@@ -18,13 +19,26 @@
             <a class="cabecalho__menu__link" href="skills.html">Minhas habilidades</a>
             <a class="cabecalho__menu__link" href="contato.html">Contato</a>
         </nav>
+
+        <div class="menuMobile invisivel">
+            <nav class="cabecalho__menu--mobile">
+                <a class="cabecalho__menu__link" href="index.html">Home</a>
+                <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+                <a class="cabecalho__menu__link" href="skills.html">Minhas habilidades</a>
+                <a class="cabecalho__menu__link" href="contato.html">Contato</a>
+            </nav>
+        </div>
+
+        <button class="button__menu">
+            <img src="assets/icons/menu.svg" alt="ícone de menu">
+        </button>
     </header>
 
 
     <main class="apresentacao">
      <section class="apresentacao__conteudo">
-        <form class="form"  action="https://formsubmit.co/erivanmuniz@outlook.com" method="POST">
-            <h2>Entre em contato</h2>
+        <form class="form"  action="http://formsubmit.co/erivanmuniz@outlook.com" method="POST">
+            <h2 class="apresentacao__conteudo__titulo" id="conteudo-titulo"></h2>
             <label for="nome">Nome</label>
             <input type="text" name="name" id="nome" placeholder="Preencha seu nome" required>
 
@@ -34,10 +48,11 @@
             <label for="textarea">Sua mensagem</label>
             <textarea name="message" id="" cols="30" rows="10" placeholder="Sua mensagem..." ></textarea>
 
-            <input type="hidden" name="_next" value="https://meuportfolio-phi.vercel.app/email-enviado.html">
+            <input type="hidden" name="_next" value="http://127.0.0.1:8080/email-enviado.html">
 
             <button type="submit">Enviar</button>
         </form>
+        <script src="js/contato.js"></script>
      </section>
      <img class="apresentacao__imagem" src="./assets/erivan4.png" alt="Foto do Erivan Muniz programando">
     </main>
@@ -48,10 +63,10 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Senac_logo.svg" alt="logo Senac" class="rodape__senac">
         </div>
         <div class="itens__rodape">
-            <p>Desenvolvido por Erivan no programa Alura Include</p>
+            <p>Desenvolvido por <strong>Erivan</strong> no programa <strong>Alura Include</strong></p>
         </div>
     </footer>
-    
+    <script src="js/menuMobile.js"></script>
 </body>
 
 </html>
