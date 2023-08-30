@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 :root {
-    --cor-primaria: #182747;
+    --cor-primaria: #4C0027;
     --cor-secundaria:  #D8D8D8;
     --cor-terciaria: #84A7A1;
     --cor-hover: #647E68;
@@ -26,12 +26,17 @@ body {
 }
 
 .cabecalho {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2% 0% 0% 15%;
+    position: relative;
 }
 
 .cabecalho__menu {
+    height: 3rem;
     display: flex;
-    gap: 80px;
+    align-items: center;
+    gap: 64px;
 }
 
 .cabecalho__menu__link {
@@ -166,14 +171,54 @@ body {
         margin: 5px 20px 20px;
 }
 
+.invisivel {
+    display: none;
+}
+
+
+.button__menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.cabecalho__menu--mobile {
+    display: none;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .button__menu {
+        display: initial;
+    }
+
+
+    .cabecalho__menu {
+        display: none;
+    }
+    .cabecalho__menu--mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 28px 0;
+        background-color: #6a6a6aee ;
+        
+    }
+}
 
  /*Estilo do Mobile*/
 @media (max-width: 767px) {
-    .cabecalho {
+    /*.cabecalho {
         padding: 2% 5%;
-    }
+    }*/
     .cabecalho__menu {
-        display: grid;
+        /*display: grid;*/
         justify-content: center;
         gap: 16px;
     }
@@ -374,6 +419,7 @@ footer p {
         height: 2.5rem;
     }
 }
+
 
 
 
